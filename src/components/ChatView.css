@@ -1,0 +1,30 @@
+.chat-button {
+    margin-top: 8px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 8px 12px 41px;
+}
+
+.chat-button.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.chat-button:hover, .chat-button:active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.delete-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.delete-button:hover, .delete-button:active {
+    opacity: 1;
+}
