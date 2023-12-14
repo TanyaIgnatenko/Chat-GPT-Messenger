@@ -24,7 +24,7 @@ export async function populate() {
       content: {
         text: 'London <3'
       },
-      role: 'user'
+      role: 'assistant'
     }
   ]);
 }

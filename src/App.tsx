@@ -2,16 +2,17 @@ import {useState, useEffect, useCallback} from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 
 import ChatsList from './components/ChatsList';
+import Messages from './components/Messages';
 import { db } from './models/db';
 
 import './App.css';
 
 function App() {
   const [activeChatId, setActiveChatId] = useState<number>(0);
-  const chats = useLiveQuery(() => db.chats.toArray());
+  const chats = useLiveQuery(() => db.chats.toArray(), [], []);
 
   useEffect(() => {
-    if (chats) {
+    if (chats.length) {
       setActiveChatId(chats[chats.length - 1].id);
     }
   }, [chats]);
@@ -21,8 +22,9 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <ChatsList chats={chats || []} activeChatId={activeChatId} onActiveChatChange={handleActiveChatChange} />
+    <div className="container">
+      <ChatsList chats={chats} activeChatId={activeChatId} onActiveChatChange={handleActiveChatChange} />
+      <Messages chatId={activeChatId} />
     </div>
   );
 }
