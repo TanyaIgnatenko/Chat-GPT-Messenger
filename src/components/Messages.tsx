@@ -13,6 +13,11 @@ interface Props {
     chatId: number;
 }
 
+function resizeTextarea(textarea) {
+    textarea.style.height = 0;
+    textarea.style.height = textarea.scrollHeight + 'px';
+}
+
 function Messages({chatId}: Props) {
     const messages = useLiveQuery(() => db.messages.where({chatId}).toArray(), [chatId], []);
     const [prompt, setPrompt] = useState('');
@@ -44,6 +49,11 @@ function Messages({chatId}: Props) {
         })
     }, [prompt]);
 
+    const handlePromptChange = useCallback((e) => {
+        setPrompt(e.target.value);
+        resizeTextarea(e.target);
+    })
+
     return (
         <div className="messages-panel">
             <div className="messages">
@@ -60,7 +70,13 @@ function Messages({chatId}: Props) {
             <div className="bottom-part">
                 {isFetchError && <Alert severity="error">Failed to fetch</Alert>}
                 <div className="add-prompt-container">
-                    <textarea placeholder="Write a prompt..." value={prompt} onChange={(e) => setPrompt(e.target.value)} className="add-prompt-textarea" />
+                    <textarea 
+                        placeholder="Write a prompt..."
+                        value={prompt}
+                        onChange={handlePromptChange}
+                        className="add-prompt-textarea"
+                        rows={1}
+                    />
                     <button onClick={handleSendPrompt} className="send-button" aria-label="Send prompt" />
                 </div>
             </div>

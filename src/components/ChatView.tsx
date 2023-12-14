@@ -35,7 +35,7 @@ function ChatView({chat, isActive, onClick}: Props) {
         db.chats.update(chat.id, {title: chatTitle});
         setIsEditMode(false);
     });
-
+    
     return (
         <button 
             onClick={handleClick} 
