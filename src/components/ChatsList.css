@@ -10,6 +10,13 @@
 .new-chat-button {
     height: 40px;
     background: transparent;
-    border: 1px solid black;
+    border: 1px solid #676767;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.new-chat-button:hover, .new-chat-button:active {
+    background: rgba(255, 255, 255, 0.2);
 }

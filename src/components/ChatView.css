@@ -23,7 +23,7 @@
 
 .title-input {
     background: transparent;
-    border: 1px solid blue;
+    border: 1px solid rgb(101, 101, 231);
     outline: none;
     width: 150px;
 }

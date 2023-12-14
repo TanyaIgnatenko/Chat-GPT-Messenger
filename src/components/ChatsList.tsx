@@ -1,4 +1,5 @@
 import {useCallback, useMemo} from 'react';
+import AddIcon from '@mui/icons-material/Add';
 
 import ChatView from './ChatView';
 import { Chat } from '../models/Chat'; 
@@ -27,7 +28,13 @@ function ChatsList({
 
     return (
         <div className="chats-panel">
-            <button onClick={handleCreateNewChat} className="new-chat-button">+ New Chat</button>
+            <button 
+                onClick={handleCreateNewChat} 
+                className="new-chat-button"
+            >
+                <AddIcon sx={{ color: '#272727', fontSize: 16, marginRight: '7px', }}/> 
+                New Chat
+            </button>
             {
                 sortedChats.map(chat => (
                         <ChatView key={chat.id} chat={chat} isActive={chat.id === activeChatId} onClick={onActiveChatChange} />
