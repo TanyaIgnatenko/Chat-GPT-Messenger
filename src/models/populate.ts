@@ -15,7 +15,7 @@ export async function populate() {
     {
       chatId,
       content: {
-        text: 'What is a capital of Great Britain?'
+        text: 'What is the capital of Great Britain?'
       },
       role: 'user'
     },
