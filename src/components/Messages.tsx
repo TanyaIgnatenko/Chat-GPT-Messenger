@@ -2,6 +2,8 @@ import { useState, useCallback } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import cn from 'classnames';
 
+import API from '../api';
+
 import { db } from '../models/db';
 
 import './Messages.css';
@@ -23,6 +25,16 @@ function Messages({chatId}: Props) {
             }
         });
         setPrompt('');
+
+        API.sendPrompt(prompt).then(answer => {
+            db.messages.add({
+                chatId,
+                role: 'assistant',
+                content: {
+                    text: answer
+                }
+            });
+        });
     }, [prompt]);
 
     return (
