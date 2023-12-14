@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import cn from 'classnames';
+import Alert from '@mui/material/Alert';
 
 import API from '../api';
 
@@ -15,8 +16,11 @@ interface Props {
 function Messages({chatId}: Props) {
     const messages = useLiveQuery(() => db.messages.where({chatId}).toArray(), [chatId], []);
     const [prompt, setPrompt] = useState('');
+    const [isFetchError, setIsFetchError] = useState(false);
 
     const handleSendPrompt = useCallback(async () => {
+        setIsFetchError(false);
+
         await db.messages.add({
             chatId,
             role: 'user',
@@ -34,7 +38,10 @@ function Messages({chatId}: Props) {
                     text: answer
                 }
             });
-        });
+        })
+        .catch(() => {
+            setIsFetchError(true);
+        })
     }, [prompt]);
 
     return (
@@ -50,9 +57,12 @@ function Messages({chatId}: Props) {
                     ))
                 }
             </div>
-            <div className="add-prompt-container">
-                <textarea placeholder="Write a prompt..." value={prompt} onChange={(e) => setPrompt(e.target.value)} className="add-prompt-textarea" />
-                <button onClick={handleSendPrompt} className="send-button" aria-label="Send prompt" />
+            <div className="bottom-part">
+                {isFetchError && <Alert severity="error">Failed to fetch</Alert>}
+                <div className="add-prompt-container">
+                    <textarea placeholder="Write a prompt..." value={prompt} onChange={(e) => setPrompt(e.target.value)} className="add-prompt-textarea" />
+                    <button onClick={handleSendPrompt} className="send-button" aria-label="Send prompt" />
+                </div>
             </div>
         </div>
     );

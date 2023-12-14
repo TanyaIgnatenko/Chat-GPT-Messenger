@@ -36,11 +36,14 @@
     align-self: flex-end;
 }
 
-.add-prompt-container {
+.bottom-part {
     position: absolute;
     bottom: 0;
-    display: flex;
     width: 100%;
+}
+
+.add-prompt-container {
+    display: flex;
     align-items: center;
 }
 
