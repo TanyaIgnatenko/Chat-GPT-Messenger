@@ -2,6 +2,7 @@
   "name": "chat-gpt-messenger",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://TanyaIgnatenko.github.io/chat-gpt-messenger",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -17,8 +18,10 @@
     "classnames": "^2.3.2",
     "dexie": "^3.2.4",
     "dexie-react-hooks": "^1.1.7",
+    "gh-pages": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga4": "^2.1.0",
     "react-scripts": "5.0.1",
     "react-use": "^17.4.2",
     "typescript": "^4.9.5",
@@ -27,7 +30,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
