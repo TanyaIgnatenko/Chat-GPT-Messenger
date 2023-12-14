@@ -17,14 +17,36 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-.delete-button {
+.title-input:read-only {
+    border: none;
+}
+
+.title-input {
+    background: transparent;
+    border: 1px solid blue;
+    outline: none;
+    width: 150px;
+}
+
+.actions {
+    display: flex;
+    margin-left: 5px;
+    width: 37px;
+}
+
+.edit-button, .delete-button {
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 14px;
+    width: 16px;
+    height: 16px;
     opacity: 0.8;
 }
 
-.delete-button:hover, .delete-button:active {
+.edit-button {
+    margin-right: 5px;
+}
+
+.delete-button:hover, .delete-button:active, .edit-button:hover, .edit-button:active {
     opacity: 1;
 }
