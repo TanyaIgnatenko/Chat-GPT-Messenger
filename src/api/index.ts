@@ -1,9 +1,8 @@
 function sendPrompt(prompt: string) {
-    return fetch('https://api.openai.com/v1/chat/completions', {
+    return fetch('http://212.164.218.218:5000/send-prompt', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${process.env.REACT_APP_CHAT_GPT_API_KEY}`
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
