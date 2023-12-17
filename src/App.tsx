@@ -4,10 +4,15 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import ChatsList from './components/ChatsList';
 import Messages from './components/Messages';
 import { db } from './models/db';
+import ReactGA from './analytics';
 
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    ReactGA.send('pageview');
+  }, []);
+
   const [activeChatId, setActiveChatId] = useState<number>(0);
   const chats = useLiveQuery(() => db.chats.toArray(), [], []);
 
