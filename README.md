@@ -2,3 +2,5 @@
 Chat-GPT Messenger
 
 __Demo:__ https://tanyaignatenko.github.io/chat-gpt-messenger/
+
+![App demo](assets/demo.png)
