@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/chat-gpt-messenger/static/css/main.ff4e078c.css",
-    "main.js": "/chat-gpt-messenger/static/js/main.4daf631c.js",
+    "main.css": "/chat-gpt-messenger/static/css/main.c62b0774.css",
+    "main.js": "/chat-gpt-messenger/static/js/main.b20826d9.js",
     "static/js/787.2f50c917.chunk.js": "/chat-gpt-messenger/static/js/787.2f50c917.chunk.js",
     "index.html": "/chat-gpt-messenger/index.html",
-    "main.ff4e078c.css.map": "/chat-gpt-messenger/static/css/main.ff4e078c.css.map",
-    "main.4daf631c.js.map": "/chat-gpt-messenger/static/js/main.4daf631c.js.map",
+    "main.c62b0774.css.map": "/chat-gpt-messenger/static/css/main.c62b0774.css.map",
+    "main.b20826d9.js.map": "/chat-gpt-messenger/static/js/main.b20826d9.js.map",
     "787.2f50c917.chunk.js.map": "/chat-gpt-messenger/static/js/787.2f50c917.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff4e078c.css",
-    "static/js/main.4daf631c.js"
+    "static/css/main.c62b0774.css",
+    "static/js/main.b20826d9.js"
   ]
 }
