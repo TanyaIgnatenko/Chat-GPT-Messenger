@@ -23,22 +23,6 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-.message {
-    width: 51%;
-    padding: 16px;
-    margin-bottom: 10px;
-    background: white;
-    border-radius: 30px;
-    border-bottom-left-radius: 0;
-}
-
-.user-message {
-    background: #cfe3ff;
-    align-self: flex-end;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 0;
-}
-
 .bottom-part {
     position: absolute;
     bottom: 0;

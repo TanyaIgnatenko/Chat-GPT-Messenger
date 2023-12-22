@@ -1,10 +1,9 @@
 import { useState, useCallback } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import cn from 'classnames';
 import Alert from '@mui/material/Alert';
 
+import Message from './Message';
 import API from '../api';
-
 import { db } from '../models/db';
 
 import './Messages.css';
@@ -59,11 +58,7 @@ function Messages({chatId}: Props) {
             <div className="messages">
                 {
                     messages.map(m => (
-                        <div className={cn('message', {
-                            'user-message': m.role === 'user',
-                        })}>
-                            {m.content.text}
-                        </div>
+                        <Message key={m.id} message={m} />
                     ))
                 }
             </div>
