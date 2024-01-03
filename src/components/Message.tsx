@@ -35,7 +35,7 @@ export default function Message({message}: Props) {
   };
 
   const handleDelete = useCallback(async () => {
-    await db.messages.delete(message.id);
+    await db.messages.delete(message.id!!);
     handleClose();
   }, []);
 

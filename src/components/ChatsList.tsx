@@ -32,7 +32,7 @@ function ChatsList({
                 onClick={handleCreateNewChat} 
                 className="new-chat-button"
             >
-                <AddIcon sx={{ color: '#272727', fontSize: 16, marginRight: '7px', }}/> 
+                <AddIcon sx={{ color: '#272727', fontSize: 16, marginRight: '7px', }} /> 
                 New Chat
             </button>
             {

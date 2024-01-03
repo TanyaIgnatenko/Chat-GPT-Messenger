@@ -4,6 +4,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import ChatsList from './components/ChatsList';
 import Messages from './components/Messages';
 import { db } from './models/db';
+import { Chat } from './models/Chat';
 import ReactGA from './analytics';
 
 import './App.css';
@@ -14,11 +15,11 @@ function App() {
   }, []);
 
   const [activeChatId, setActiveChatId] = useState<number>(0);
-  const chats = useLiveQuery(() => db.chats.toArray(), [], []);
+  const chats = (useLiveQuery(() => db.chats.toArray(), [], []));
 
   useEffect(() => {
     if (chats.length) {
-      setActiveChatId(chats[chats.length - 1].id);
+      setActiveChatId(chats[chats.length - 1].id!!);
     }
   }, [chats]);
 

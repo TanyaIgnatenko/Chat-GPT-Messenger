@@ -19,7 +19,7 @@ function ChatView({chat, isActive, onClick}: Props) {
     const [chatTitle, setChatTitle] = useState(chat.title);
     const [isEditMode, setIsEditMode] = useState(false);
     const handleClick = useCallback(() => {
-        onClick(chat.id);
+        onClick(chat.id!!);
     }, []);
 
     const handleEdit = useCallback(() => {
@@ -27,12 +27,12 @@ function ChatView({chat, isActive, onClick}: Props) {
     }, []);
 
     const handleDelete = useCallback(() => {
-        db.chats.delete(chat.id);
+        db.chats.delete(chat.id!!);
     }, []);
 
     const chatButtonRef = useRef(null);
     useClickAway(chatButtonRef, () => {
-        db.chats.update(chat.id, {title: chatTitle});
+        db.chats.update(chat.id!!, {title: chatTitle});
         setIsEditMode(false);
     });
     
