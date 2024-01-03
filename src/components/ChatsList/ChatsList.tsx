@@ -1,9 +1,9 @@
 import {useCallback, useMemo} from 'react';
 import AddIcon from '@mui/icons-material/Add';
 
-import ChatView from './ChatView';
-import { Chat } from '../models/Chat'; 
-import { db } from '../models/db';
+import ChatView from '../ChatView/ChatView';
+import { Chat } from '../../models/Chat'; 
+import { db } from '../../models/db';
 
 import './ChatsList.css';
 

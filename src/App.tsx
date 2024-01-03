@@ -1,10 +1,9 @@
 import {useState, useEffect, useCallback} from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 
-import ChatsList from './components/ChatsList';
-import Messages from './components/Messages';
+import ChatsList from './components/ChatsList/ChatsList';
+import Messages from './components/Messages/Messages';
 import { db } from './models/db';
-import { Chat } from './models/Chat';
 import ReactGA from './analytics';
 
 import './App.css';

@@ -3,8 +3,8 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import cn from 'classnames';
 
-import { Message as TMessage } from '../models/Message';
-import { db } from '../models/db';
+import { Message as TMessage } from '../../models/Message';
+import { db } from '../../models/db';
 
 import './Message.css';
 

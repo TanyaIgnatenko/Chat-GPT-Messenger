@@ -1,8 +1,8 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 
-import Message from './Message';
-import { db } from '../models/db';
-import AddPrompt from './AddPrompt';
+import Message from '../Message/Message';
+import { db } from '../../models/db';
+import AddPrompt from '../AddPrompt/AddPrompt';
 
 import './Messages.css';
 

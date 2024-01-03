@@ -4,8 +4,8 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import {useClickAway} from 'react-use';
 
-import { Chat } from '../models/Chat';
-import { db } from '../models/db';
+import { Chat } from '../../models/Chat';
+import { db } from '../../models/db';
 
 import './ChatView.css';
 

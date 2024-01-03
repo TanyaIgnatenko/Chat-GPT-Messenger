@@ -2,9 +2,9 @@ import { useCallback, useState, ChangeEvent } from 'react';
 import Alert from '@mui/material/Alert';
 import cn from 'classnames';
 
-import API from '../api';
-import { db } from '../models/db';
-import { resizeTextarea } from '../utils/textarea';
+import API from '../../api';
+import { db } from '../../models/db';
+import { resizeTextarea } from '../../utils/textarea';
 
 import './AddPrompt.css';
 
