@@ -1,0 +1,53 @@
+.add-prompt-wrapper {
+    width: 100%;
+}
+
+.add-prompt-container {
+    display: flex;
+    position: relative;
+}
+
+.add-prompt-textarea {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 18px 48px 18px 48px;
+    border: none;
+    outline: none;
+    border-top: 1px solid rgb(234 234 234);
+    resize: none;
+}
+
+.send-button {
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    background-image: url('../icons/send.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.attach-file-button {
+    position: absolute;
+    left: 8px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    background-image: url('../icons/attach.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.hidden-file-input {
+    visibility: hidden;
+}
