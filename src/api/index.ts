@@ -13,6 +13,8 @@ function sendPrompt(prompt: string) {
     .then(resp => resp.choices[0].message.content);
 }
 
-export default {
+const API = {
     sendPrompt
-};
+}
+
+export default API;

@@ -36,7 +36,7 @@ function ChatsList({
                 New Chat
             </button>
             {
-                sortedChats.map(chat => (
+                sortedChats.map((chat: Chat) => (
                         <ChatView key={chat.id} chat={chat} isActive={chat.id === activeChatId} onClick={onActiveChatChange} />
                     )
                 )

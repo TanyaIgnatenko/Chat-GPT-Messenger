@@ -37,7 +37,7 @@ export default function Message({message}: Props) {
   const handleDelete = useCallback(async () => {
     await db.messages.delete(message.id!!);
     handleClose();
-  }, []);
+  }, [message.id]);
 
   return (
     <div onContextMenu={handleContextMenu} className={cn('message', {

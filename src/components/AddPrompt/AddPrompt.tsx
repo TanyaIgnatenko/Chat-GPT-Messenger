@@ -41,7 +41,7 @@ export default function AddPrompt({chatId, className}: Props) {
         .catch(() => {
             setIsFetchError(true);
         })
-    }, [prompt]);
+    }, [prompt, chatId]);
 
     const handlePromptChange = useCallback((e: ChangeEvent<HTMLTextAreaElement>) => {
         setPrompt(e.target.value);
