@@ -6,7 +6,7 @@ __Demo:__ https://tanyaignatenko.github.io/Chat-GPT-Messenger/
 Features:
 - Ability to send messages to Chat-GPT without limits
 - Ability to create multiple chats with different names
-- Saving of a message history locally in a browser in IndexedDB
+- Ability to save a message history locally in a browser in IndexedDB
 - Ability to delete messages
 - Ability to delete chats
 
