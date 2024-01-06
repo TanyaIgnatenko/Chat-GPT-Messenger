@@ -2,7 +2,7 @@
   "name": "chat-gpt-messenger",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://TanyaIgnatenko.github.io/chat-gpt-messenger",
+  "homepage": "https://TanyaIgnatenko.github.io/Chat-GPT-Messenger",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
