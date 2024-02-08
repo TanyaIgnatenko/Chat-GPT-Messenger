@@ -1,5 +1,5 @@
 function sendPrompt(prompt: string) {
-    return fetch('https://212.164.218.218:5000/send-prompt', {
+    return fetch('https://212.164.218.218:4000/send-prompt', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
